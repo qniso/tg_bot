@@ -8,7 +8,7 @@ import { carFuel } from './shared/components/scenes/car-fuel.js';
 import { registerWorkingPlan } from './shared/components/scenes/reg-working-plan.js';
 import { takeWorkingPlan } from './shared/components/scenes/take-plan-in-work.js'
 
-const port = process.env.PORT | 3000;
+const port = process.env.PORT || 3000;
 const TOKEN = process.env.TELEGRAM_TOKEN;
 const date = new Date().toLocaleString();
 const bot = new Telegraf(TOKEN, {});
@@ -68,6 +68,6 @@ bot.command("work_end", (ctx) => {
 
 
 bot.launch();
-app.listen(port, () => {
-    console.log("Server is working");
-});
+// app.listen(port, () => {
+//     console.log("Server is working");
+// });
