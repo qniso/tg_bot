@@ -17,10 +17,8 @@ function timer() {
                 .find()
                 .toArray((err, resp) => {
                     console.log(resp);
-                })
+                });
         });
-    }, 300000)
+    }, 180000);
 }
-export {
-    timer
-}
+export { timer };
